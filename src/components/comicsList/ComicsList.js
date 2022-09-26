@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
@@ -39,25 +40,10 @@ const ComicsList = () => {
   // Этот метод создан для оптимизации,
   // чтобы не помещать такую конструкцию в метод render
   function renderItems(arr) {
-    const items = arr.map((item, i) => {
+    const items = arr.map((item) => {
       return (
-        <li
-          className="comics__item"
-          //   tabIndex={0}
-          //   ref={(el) => (itemRefs.current[i] = el)}
-          key={item.id}
-          //   onClick={() => {
-          //     props.onCharSelected(item.id);
-          //     // focusOnItem(i);
-          //   }}
-          //   onKeyPress={(e) => {
-          //     if (e.key === " " || e.key === "Enter") {
-          //       props.onCharSelected(item.id);
-          //       focusOnItem(i);
-          //     }
-          //   }}
-        >
-          <a href="#">
+        <li className="comics__item" key={item.id}>
+          <Link to={`/comics/${item.id}`}>
             <img
               src={item.thumbnail}
               alt={item.title}
@@ -65,7 +51,7 @@ const ComicsList = () => {
             />
             <div className="comics__item-name">{item.title}</div>
             <div className="comics__item-price">{item.price}</div>
-          </a>
+          </Link>
         </li>
       );
     });
