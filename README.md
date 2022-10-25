@@ -13,4 +13,4 @@
 - Валидация вводимого текста с помощью Yup
 - Использование скелетона для незагруженного контента
 - Возможно что-то еще...
-# Демо: https://naf-fly.github.io/react-weather-info/
+# Демо: https://vk.com/away.php?to=https%3A%2F%2Fmarvel-wiki-test.netlify.app%2F&post=284375316_1762&cc_key=
